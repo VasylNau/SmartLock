@@ -24,6 +24,7 @@ public class User {
     private Boolean active;
     private Boolean locked;
 
+    private String password;
 
     @EqualsAndHashCode.Exclude
     @OneToOne
