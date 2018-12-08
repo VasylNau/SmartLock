@@ -15,7 +15,7 @@ public class AccessLevel {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private Integer id;
     private String name;
 
     @OneToMany(mappedBy = "accessLevel")
