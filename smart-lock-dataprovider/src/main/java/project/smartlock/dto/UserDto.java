@@ -1,6 +1,5 @@
 package project.smartlock.dto;
 
-
 import lombok.Getter;
 import lombok.Setter;
 

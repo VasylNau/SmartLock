@@ -6,7 +6,12 @@ import project.smartlock.model.User;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring")
+@Mapper(
+        componentModel = "spring",
+        uses = {RoleDtoMapper.class,
+                UserToLockRelationDtoMapper.class,
+                UnlockingHistoryItemDtoMapper.class}
+)
 public interface UserDtoMapper {
 
     UserDto entityToDto(User user);
