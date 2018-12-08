@@ -15,7 +15,7 @@ public class SwaggerConfig {
     public Docket productApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("project.smartlock.controller"))
+                .apis(RequestHandlerSelectors.basePackage("project.smartlock.restapi"))
                 .paths(PathSelectors.any())
                 .build();
     }
