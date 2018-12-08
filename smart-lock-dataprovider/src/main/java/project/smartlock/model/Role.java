@@ -11,11 +11,12 @@ import java.util.List;
 public class Role {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Integer id;
     private String name;
 
     @ManyToMany(mappedBy = "roles",
             fetch = FetchType.LAZY)
-    private List<User> user;
+    private List<User> users;
+
 }

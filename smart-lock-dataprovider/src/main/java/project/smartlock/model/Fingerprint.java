@@ -14,7 +14,7 @@ public class Fingerprint {
 
     @Column(name = "fingerprint")
     @Lob
-    private byte[] fingerprintData; // TODO: Investigate fingerprinting storing
+    private byte[] fingerprintData; // TODO: Investigate fingerprinting storing and using
 
     @OneToOne(mappedBy = "fingerprint", fetch = FetchType.LAZY)
     private User user;
