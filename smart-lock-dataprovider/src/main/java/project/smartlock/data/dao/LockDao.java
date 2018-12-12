@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import project.smartlock.data.model.Lock;
 
 @Repository
-public interface LockDao extends JpaRepository<Long, Lock> {
+public interface LockDao extends JpaRepository<Lock, Long> {
 }

@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import project.smartlock.data.model.Fingerprint;
 
 @Repository
-public interface FingerprintDao extends JpaRepository<Long, Fingerprint> {
+public interface FingerprintDao extends JpaRepository<Fingerprint, Long> {
 }
