@@ -14,7 +14,6 @@ public class LockDto {
     private String description;
 
     private Boolean active;
-    private Boolean deleted;
 
     private List<UnlockingHistoryItemDto> unlockingHistoryItems;
     private List<UserToLockRelationDto> relatedUsers;

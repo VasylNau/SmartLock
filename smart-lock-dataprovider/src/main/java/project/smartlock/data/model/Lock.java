@@ -1,5 +1,6 @@
 package project.smartlock.data.model;
 
+import lombok.AccessLevel;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,9 +20,8 @@ public class Lock {
     private String name;
     private String description;
 
-    private Boolean active;
-    private Boolean deleted;
-
+    @Getter(AccessLevel.NONE) private Boolean active;
+    @Getter(AccessLevel.NONE) private Boolean deleted;
 
     @EqualsAndHashCode.Exclude
     @OneToMany(mappedBy = "lock")
@@ -52,4 +52,13 @@ public class Lock {
         relatedUsers.remove(userToLockRelation);
         userToLockRelation.setLock(null);
     }
+
+    public Boolean isActive() {
+        return active;
+    }
+
+    public Boolean isDeleted() {
+        return deleted;
+    }
+
 }

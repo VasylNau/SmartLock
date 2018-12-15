@@ -10,7 +10,7 @@ public interface LockService {
 
     LockDto getLock(Long lockId);
 
-    LockDto updateLock(LockDto lock);
+    LockDto updateLock(Long lockId, LockDto lock);
 
     LockDto deleteLock(Long lockId);
 
