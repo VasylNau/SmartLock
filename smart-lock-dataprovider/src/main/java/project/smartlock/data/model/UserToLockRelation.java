@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class UserToLockRelation {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @EqualsAndHashCode.Exclude

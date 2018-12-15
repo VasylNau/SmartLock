@@ -10,6 +10,7 @@ import javax.persistence.*;
 public class Fingerprint {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "fingerprint")

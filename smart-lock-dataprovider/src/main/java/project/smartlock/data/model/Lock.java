@@ -9,12 +9,13 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Table(name = "`lock`")
 @Getter @Setter
 @EqualsAndHashCode
 public class Lock {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
