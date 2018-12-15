@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import project.smartlock.data.model.AccessLevel;
 
 @Repository
-public interface AccessLevelDao extends JpaRepository<Integer, AccessLevel> {
+public interface AccessLevelDao extends JpaRepository<AccessLevel, Integer> {
 }

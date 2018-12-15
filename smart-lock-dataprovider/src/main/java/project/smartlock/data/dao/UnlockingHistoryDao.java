@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import project.smartlock.data.model.UnlockingHistoryItem;
 
 @Repository
-public interface UnlockingHistoryDao extends JpaRepository<Long, UnlockingHistoryItem> {
+public interface UnlockingHistoryDao extends JpaRepository<UnlockingHistoryItem, Long> {
 
 }

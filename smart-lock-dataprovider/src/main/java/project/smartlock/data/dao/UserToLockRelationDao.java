@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import project.smartlock.data.model.UserToLockRelation;
 
 @Repository
-public interface UserToLockRelationDao extends JpaRepository<Long, UserToLockRelation> {
+public interface UserToLockRelationDao extends JpaRepository<UserToLockRelation, Long> {
 }

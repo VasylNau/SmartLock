@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import project.smartlock.data.model.Role;
 
 @Repository
-public interface RoleDao extends JpaRepository<Integer, Role> {
+public interface RoleDao extends JpaRepository<Role, Integer> {
 }

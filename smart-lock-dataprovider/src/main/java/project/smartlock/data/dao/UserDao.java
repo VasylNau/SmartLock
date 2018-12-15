@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import project.smartlock.data.model.User;
 
 @Repository
-public interface UserDao extends JpaRepository<Long, User> {
+public interface UserDao extends JpaRepository<User, Long> {
 
 }
