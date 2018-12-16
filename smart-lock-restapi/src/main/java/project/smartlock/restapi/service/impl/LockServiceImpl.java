@@ -8,6 +8,7 @@ import project.smartlock.data.mapper.LockDtoMapper;
 import project.smartlock.data.model.Lock;
 import project.smartlock.restapi.service.LockService;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
@@ -20,11 +21,10 @@ public class LockServiceImpl implements LockService {
     @Autowired
     private LockDao lockDao;
 
-
     @Override
-    public LockDto addLock(LockDto lockDto) {
-        Lock createdLock = lockDao.save(lockDtoMapper.dtoToEntity(lockDto));
-        return lockDtoMapper.entityToDto(createdLock);
+    public List<LockDto> getAllLock() {
+        List<Lock> locks = lockDao.findAll();
+        return lockDtoMapper.entityListToDtoList(locks);
     }
 
     @Override
@@ -36,6 +36,13 @@ public class LockServiceImpl implements LockService {
         }
         return lockDtoMapper.entityToDto(lockOptional.get());
     }
+
+    @Override
+    public LockDto addLock(LockDto lockDto) {
+        Lock createdLock = lockDao.save(lockDtoMapper.dtoToEntity(lockDto));
+        return lockDtoMapper.entityToDto(createdLock);
+    }
+
 
     @Override
     public LockDto updateLock(Long lockId, LockDto lockDto) {

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import project.smartlock.data.dto.LockDto;
 import project.smartlock.restapi.service.LockService;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 @RestController
@@ -18,6 +19,11 @@ public class LockController {
 
     @Autowired
     private LockService lockService;
+
+    @GetMapping
+    public List<LockDto> getAllLocks() {
+        return lockService.getAllLock();
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity<?> getLock(@PathVariable Long id) {
@@ -32,7 +38,7 @@ public class LockController {
         return responseEntity;
     }
 
-    @PostMapping("/")
+    @PostMapping
     public LockDto addLock(@RequestBody LockDto lock) {
         LockDto addedLock = lockService.addLock(lock);
         return addedLock;

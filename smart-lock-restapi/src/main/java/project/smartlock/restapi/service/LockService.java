@@ -3,6 +3,8 @@ package project.smartlock.restapi.service;
 import org.springframework.stereotype.Service;
 import project.smartlock.data.dto.LockDto;
 
+import java.util.List;
+
 @Service
 public interface LockService {
 
@@ -15,4 +17,5 @@ public interface LockService {
     LockDto deleteLock(Long lockId);
 
 
+    List<LockDto> getAllLock();
 }
